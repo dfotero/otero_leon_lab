@@ -1,77 +1,131 @@
-# Otero-Leon Lab Website
+# Lab Website
 
-A GitHub Pages-ready Jekyll website for the Otero-Leon Lab.
+A clean, academic research lab website that runs on **GitHub Pages** with zero build steps.
 
-## Quick start
-
-### Option 1: Edit directly on GitHub
-1. Create a new public repository, e.g. `otero-leon-lab`.
-2. Upload all files from this folder.
-3. Go to **Settings > Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select **main** and **/(root)**.
-6. Save. GitHub will publish the site at a GitHub Pages URL.
-
-### Option 2: Edit locally with VS Code
-1. Install Ruby + Bundler + Jekyll.
-2. Open this folder in VS Code.
-3. Run:
-   ```bash
-   bundle install
-   bundle exec jekyll serve
-   ```
-4. Open the local URL shown in the terminal.
-5. Commit and push changes to GitHub.
-
-## Easy edits
-- Lab title and tagline: `_config.yml`
-- Homepage text: `index.md`
-- Navigation: `_includes/header.html`
-- Colors and styling: `assets/css/main.css`
-- People: add a new file in `_people/`
-- Publications: add a new file in `_publications/`
-- Research projects: add a new file in `_research/`
-- News: add a new file in `_news/`
-- Talks/media: add a new file in `_talks/`
-- Teaching: edit `teaching.md` and `_teaching/`
-- Replace hero graphic or add real photos in `images/`
-
-## File templates
-Duplicate one of the existing collection files and change the front matter fields.
-
-### Person template
-```md
 ---
-name: Full Name
-role: PhD Student
-category: phd_students
-image: /images/people-placeholder.svg
-email: person@virginia.edu
-website: https://example.com
-linkedin: https://linkedin.com/in/example
-scholar: https://scholar.google.com/...
-researchgate: https://researchgate.net/profile/...
-order: 3
+
+## 🚀 Quick Start: Hosting on GitHub Pages
+
+1. **Create a GitHub repository** named `yourusername.github.io` (for your personal/lab page) OR any name like `lab-website` (for a project page).
+2. **Upload all files** from this folder to the repository root.
+3. Go to your repository → **Settings → Pages**.
+4. Under *Source*, select **Deploy from branch → main → / (root)**.
+5. Your site will be live at `https://yourusername.github.io` (or `https://yourusername.github.io/lab-website`).
+
+> **That's it.** No Node.js, no Jekyll, no build step needed.
+
 ---
-Short bio here.
+
+## ✏️ How to Update Your Website
+
+**All content lives in one file: `js/data.js`**
+
+You never need to touch `index.html` or `css/style.css` for routine updates.
+
+### Adding a news post
+```js
+// In js/data.js, add an entry to the `news` array:
+{
+  date: "2025-06-01",
+  title: "Paper accepted at ICML 2025",
+  body: "Congratulations to ..."
+},
 ```
 
-### Publication template
-```md
----
-title: "Paper title"
-authors: "Author 1, Author 2, Author 3"
-journal: "Journal Name"
-year: 2026
-doi: "https://doi.org/..."
-pdf: ""
-category: "Selected"
-featured: false
----
-Optional short summary.
+### Adding a team member
+```js
+// In js/data.js, add an entry to the `team` array:
+{
+  name: "Dr. New Person",
+  role: "Postdoctoral Researcher",
+  bio: "Short bio here.",
+  photo: "https://link-to-photo.jpg",  // or "" for initials avatar
+  email: "person@lab.edu",
+  website: "",
+  googleScholar: "",
+  twitter: "",
+  github: "",
+  category: "postdoc"  // faculty | postdoc | phd | masters | collaborator
+},
 ```
 
-## Notes
-- The current starter content mixes information from public profiles and placeholders.
-- Replace any missing or approximate text with your preferred wording.
-- GitHub Pages supports Jekyll natively, so you can host this without a custom server.
+### Adding a publication
+```js
+// In js/data.js, add an entry to the `publications` array (most recent first):
+{
+  title: "My New Paper",
+  authors: "Smith, J., Doe, A.",
+  venue: "NeurIPS 2025",
+  year: 2025,
+  type: "conference",  // conference | journal | workshop | preprint
+  pdf: "https://arxiv.org/pdf/...",
+  code: "https://github.com/...",
+  website: "",
+  highlight: true  // shows ★ Featured badge
+},
+```
+
+### Adding a research project
+```js
+// In js/data.js, add an entry to the `research` array:
+{
+  title: "Project Title",
+  status: "active",   // active | completed
+  tags: ["Tag1", "Tag2"],
+  description: "What this project is about.",
+  funding: "NSF Award #...",
+  members: ["Name 1", "Name 2"],
+  image: ""
+},
+```
+
+---
+
+## 📁 File Structure
+
+```
+lab-website/
+├── index.html        # Page structure (HTML skeleton — rarely needs editing)
+├── css/
+│   └── style.css     # All styles (edit to change colors/fonts)
+├── js/
+│   ├── data.js       # ✅ YOUR CONTENT — edit this file
+│   └── main.js       # Renderer (do not edit)
+└── README.md         # This file
+```
+
+---
+
+## 🎨 Customizing Colors and Fonts
+
+Open `css/style.css` and find the `:root` block near the top. Change the CSS variables:
+
+```css
+:root {
+  --accent:    #2f5bbd;  /* Main blue — change to your color */
+  --ink:       #1a1a2e;  /* Dark text color */
+  --bg:        #fafaf8;  /* Page background */
+  ...
+}
+```
+
+To change fonts, swap the Google Fonts `@import` URL at the top of `style.css` and update the font variables.
+
+---
+
+## 🖼️ Adding a Custom Lab Logo or Photo
+
+Place the image file in an `assets/` folder and reference it in `index.html` or `data.js` as needed. For team photos, either host them on the web and paste the URL into the `photo` field, or upload them to `assets/photos/` in the repo.
+
+---
+
+## 📬 Custom Domain (Optional)
+
+If you have a domain like `horizonlab.edu`:
+1. Add a file named `CNAME` to the repo root containing just your domain: `horizonlab.edu`
+2. Update your domain's DNS with a CNAME record pointing to `yourusername.github.io`
+3. Enable HTTPS in GitHub Pages settings
+
+---
+
+*Built with plain HTML, CSS, and JavaScript. No frameworks or build tools required.*

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Otero-Leon Lab — University of Virginia</title>
+  <meta name="description" content="Designing data-driven decision models to improve healthcare systems and patient outcomes.">
+  <link rel="stylesheet" href="css/style.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Otero-Leon Lab — UVA">
+</head>
+<body>
+
+  <header id="site-header">
+    <div class="header-inner">
+      <div class="brand-name" id="header-lab-name"></div>
+      <div class="brand-inst" id="header-institution"></div>
+    </div>
+    <nav class="tab-bar" id="tab-bar">
+      <button class="tab-btn active" data-tab="home">Home</button>
+      <button class="tab-btn" data-tab="people">People</button>
+      <button class="tab-btn" data-tab="research">Research</button>
+      <button class="tab-btn" data-tab="publications">Publications</button>
+      <button class="tab-btn" data-tab="news">News</button>
+      <button class="tab-btn" data-tab="teaching">Teaching</button>
+      <button class="tab-btn" data-tab="talks">Talks</button>
+      <button class="tab-btn" data-tab="joinus">Join Us</button>
+      <button class="tab-btn" data-tab="contact">Contact</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HOME -->
+    <div class="tab-panel active" id="tab-home">
+      <div class="container">
+        <div class="hero">
+          <span class="eyebrow" id="hero-eyebrow"></span>
+          <h1 id="hero-title"></h1>
+          <p class="hero-sub" id="hero-sub"></p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" data-goto="research">Research</button>
+            <button class="btn btn-outline" data-goto="publications">Publications</button>
+          </div>
+        </div>
+
+        <div class="areas-section">
+          <span class="section-label">Core Research Themes</span>
+          <h2>What We Work On</h2>
+          <p class="section-sub">Our work sits at the intersection of operations research, data science, and healthcare — building models that translate into real-world impact.</p>
+          <div class="areas-grid" id="research-areas"></div>
+        </div>
+
+        <div class="home-about">
+          <span class="section-label">About the Lab</span>
+          <h2>Our Mission</h2>
+          <p class="section-sub" style="max-width:65ch">The Otero-Leon Lab at the University of Virginia develops analytical and computational tools to help healthcare systems make smarter, more equitable decisions. We combine optimization, simulation, and machine learning to address problems in disease prevention, clinical operations, and resource allocation — with the goal of improving outcomes for patients and providers alike.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PEOPLE -->
+    <div class="tab-panel" id="tab-people">
+      <div class="container">
+        <div class="page-header">
+          <span class="section-label">People</span>
+          <h2>The Team</h2>
+          <p class="section-sub">Researchers working at the intersection of operations research and healthcare.</p>
+        </div>
+        <div id="team-container"></div>
+      </div>
+    </div>
+
+    <!-- RESEARCH -->
+    <div class="tab-panel" id="tab-research">
+      <div class="container">
+        <div class="page-header">
+          <span class="section-label">Projects</span>
+          <h2>Research</h2>
+          <p class="section-sub">We tackle healthcare problems through the lens of data-driven decision modeling.</p>
+        </div>
+        <div class="research-grid" id="research-container"></div>
+      </div>
+    </div>
+
+    <!-- PUBLICATIONS -->
+    <div class="tab-panel" id="tab-publications">
+      <div class="container">
+        <div class="page-header">
+          <span class="section-label">Papers</span>
+          <h2>Publications</h2>
+          <p class="section-sub">Peer-reviewed journal articles, conference papers, and working papers.</p>
+        </div>
+        <div class="pub-filters">
+          <button class="pub-filter-btn active" data-filter="all">All</button>
+          <button class="pub-filter-btn" data-filter="journal">Journal</button>
+          <button class="pub-filter-btn" data-filter="conference">Conference</button>
+          <button class="pub-filter-btn" data-filter="preprint">Preprint</button>
+        </div>
+        <div id="publications-container"></div>
+      </div>
+    </div>
+
+    <!-- NEWS -->
+    <div class="tab-panel" id="tab-news">
+      <div class="container">
+        <div class="page-header">
+          <span class="section-label">Updates</span>
+          <h2>News</h2>
+          <p class="section-sub">Latest announcements, paper acceptances, and milestones.</p>
+        </div>
+        <div class="news-list" id="news-container"></div>
+        <p id="news-empty" style="color:var(--ink-muted);font-style:italic;display:none">No news posted yet. Check back soon!</p>
+      </div>
+    </div>
+
+    <!-- TEACHING -->
+    <div class="tab-panel" id="tab-teaching">
+      <div class="container">
+        <div class="page-header">
+          <span class="section-label">Courses</span>
+          <h2>Teaching</h2>
+          <p class="section-sub">Graduate and undergraduate courses taught at UVA.</p>
+        </div>
+        <div class="teaching-list" id="teaching-container"></div>
+      </div>
+    </div>
+
+    <!-- TALKS -->
+    <div class="tab-panel" id="tab-talks">
+      <div class="container">
+        <div class="page-header">
+          <span class="section-label">Presentations</span>
+          <h2>Talks</h2>
+          <p class="section-sub">Invited talks, keynotes, and conference presentations.</p>
+        </div>
+        <div id="talks-container"></div>
+        <p id="talks-empty" style="color:var(--ink-muted);font-style:italic;display:none">Talks will be listed here soon.</p>
+      </div>
+    </div>
+
+    <!-- JOIN US -->
+    <div class="tab-panel" id="tab-joinus">
+      <div class="container">
+        <div class="page-header">
+          <span class="section-label">Opportunities</span>
+          <h2>Join the Lab</h2>
+          <p class="section-sub" id="joinus-intro"></p>
+        </div>
+        <div class="contact-layout">
+          <div>
+            <span class="section-label">Open Positions</span>
+            <div class="openings-list" id="openings-container"></div>
+            <div class="info-box" style="margin-top:1.5rem">
+              <h4>For Prospective PhD Students</h4>
+              <p id="phd-note"></p>
+            </div>
+            <div class="info-box">
+              <h4>For Undergraduates</h4>
+              <p id="undergrad-note"></p>
+            </div>
+          </div>
+          <div class="joinus-why">
+            <span class="section-label">Why Join Us?</span>
+            <div class="why-card"><div class="why-icon">🔬</div><div><strong>Rigorous Research</strong><p>Work on real, impactful problems using state-of-the-art methods in OR and ML.</p></div></div>
+            <div class="why-card"><div class="why-icon">🏥</div><div><strong>Real-World Impact</strong><p>Our models are designed to improve the lives of patients and healthcare workers.</p></div></div>
+            <div class="why-card"><div class="why-icon">🎓</div><div><strong>Mentorship</strong><p>Close mentorship and strong support for career development in academia and industry.</p></div></div>
+            <div class="why-card"><div class="why-icon">🌐</div><div><strong>Collaboration</strong><p>Active network with healthcare providers, other universities, and industry partners.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="tab-panel" id="tab-contact">
+      <div class="container">
+        <div class="page-header">
+          <span class="section-label">Get in Touch</span>
+          <h2>Contact</h2>
+          <p class="section-sub">Questions about research, collaboration, or joining the lab? We'd love to hear from you.</p>
+        </div>
+        <div class="contact-simple">
+          <div class="contact-card">
+            <div class="contact-card-icon">✉️</div>
+            <h3>Email</h3>
+            <p id="contact-email-link"></p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon">📍</div>
+            <h3>Location</h3>
+            <p id="contact-address"></p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon">🎓</div>
+            <h3>Department</h3>
+            <p id="contact-dept"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-lab" id="footer-lab-name"></div>
+        <div class="footer-inst" id="footer-institution"></div>
+      </div>
+      <div class="footer-links" id="footer-links"></div>
+    </div>
+    <div class="container">
+      <div class="footer-bottom" id="footer-copy"></div>
+    </div>
+  </footer>
+
+  <!-- Project detail panel -->
+  <div class="project-overlay" id="project-overlay"></div>
+  <aside class="project-panel" id="project-panel" aria-modal="true" role="dialog">
+    <div class="panel-hero" id="panel-hero">
+      <div class="panel-hero-emoji" id="panel-hero-emoji">🔬</div>
+      <button class="panel-close" id="panel-close" aria-label="Close">✕</button>
+      <div class="panel-hero-meta" id="panel-hero-meta"></div>
+    </div>
+    <div class="panel-body">
+      <div class="panel-title" id="panel-title"></div>
+      <div class="panel-section" id="panel-section-desc">
+        <div class="panel-section-label">Overview</div>
+        <div class="panel-description" id="panel-description"></div>
+      </div>
+      <div class="panel-section" id="panel-section-members">
+        <div class="panel-section-label">Team</div>
+        <div class="panel-members" id="panel-members"></div>
+      </div>
+      <div class="panel-section" id="panel-section-funding" style="display:none">
+        <div class="panel-section-label">Funding</div>
+        <div class="panel-funding" id="panel-funding"></div>
+      </div>
+      <div class="panel-section" id="panel-section-papers">
+        <div class="panel-section-label">Papers</div>
+        <div class="panel-paper-list" id="panel-papers"></div>
+      </div>
+      <div class="panel-section" id="panel-section-tools">
+        <div class="panel-section-label">Tools &amp; Software</div>
+        <div class="panel-tool-list" id="panel-tools"></div>
+      </div>
+      <div class="panel-section" id="panel-section-links">
+        <div class="panel-section-label">Related Links</div>
+        <div class="panel-links-list" id="panel-links"></div>
+      </div>
+    </div>
+  </aside>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
