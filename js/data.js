@@ -45,7 +45,7 @@ const LAB_DATA = {
       name: "Prof. Daniel F. Otero-León",
       role: "Principal Investigator",
       bio: "Assistant Professor the University of Virginia",
-      photo: "assets/images/dotero.jpg",
+      photo: "https://raw.githubusercontent.com/dfotero/otero_leon_lab/main/assets/images/dotero.JPG",
       email: "dfotero@virginia.edu",
       website: "https://engineering.virginia.edu",
       googleScholar: "https://scholar.google.com/citations?user=oA2j_v4AAAAJ&hl=en",
@@ -85,7 +85,7 @@ const LAB_DATA = {
       description: "We develop stochastic and robust optimization models that help clinicians and administrators make better decisions when data is incomplete, noisy, or inherently uncertain. Applications include treatment planning, triage prioritization, and hospital capacity management. Our models are designed to be interpretable and deployable in real clinical environments.",
       image: "",
       funding: "",
-      members: ["Prof. Iván Otero-León"],
+      members: ["Prof. Daniel Otero-León"],
 
       // Papers associated with this project
       papers: [
@@ -129,7 +129,7 @@ const LAB_DATA = {
       description: "This project builds mathematical models that simulate disease progression and evaluate the population-level impact of prevention strategies. We work with public health partners to optimize screening intervals, target high-risk populations, and allocate limited prevention resources equitably. Methods include Markov chains, simulation, and dynamic programming.",
       image: "",
       funding: "",
-      members: ["Prof. Iván Otero-León"],
+      members: ["Prof. Daniel Otero-León"],
       papers: [],
       tools: [],
       links: [],
@@ -143,7 +143,7 @@ const LAB_DATA = {
       description: "We design and implement OR-based tools that help hospitals and health systems operate more efficiently. Projects span surgical scheduling, ICU capacity planning, emergency department throughput, and pharmaceutical supply chains. Our goal is to translate rigorous mathematical models into decision tools that practitioners can actually use.",
       image: "",
       funding: "",
-      members: ["Prof. Iván Otero-León"],
+      members: ["Prof. Daniel Otero-León"],
       papers: [],
       tools: [],
       links: [],
