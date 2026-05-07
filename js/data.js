@@ -20,7 +20,7 @@ const LAB_DATA = {
 
   home: {
     heroHeadline: "Designing Data-Driven Decision Models for Healthcare",
-    heroSubtext: "We develop mathematical and computational models that help healthcare systems make better decisions — improving patient outcomes, reducing costs, and closing equity gaps.",
+    heroSubtext: "We develop mathematical and computational models that help healthcare systems make better decisions, improving patient outcomes, reducing costs, and closing equity gaps.",
     researchAreas: [
       {
         icon: "🎲",
