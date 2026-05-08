@@ -138,7 +138,7 @@ const LAB_DATA = {
   // ============================================================
   research: [
     {
-      title: "Stochastic Optimization for Clinical Decision Support",
+      title: "",
       status: "active",
       tags: ["Stochastic Optimization", "Clinical Decision-Making", "Uncertainty"],
       summary: "Optimization models that account for clinical uncertainty to support real-time and strategic decisions in healthcare settings.",
@@ -162,14 +162,14 @@ const LAB_DATA = {
       ],
 
       // Software, datasets, or tools
-      tools: [
+      //tools: [
         // {
         //   name: "Tool name",
         //   description: "What it does.",
         //   link: "https://github.com/...",
         //   type: "software"  // software | dataset | package
         // },
-      ],
+      //],
 
       // Extra links: talks, press, collaborators, etc.
       links: [
@@ -182,28 +182,31 @@ const LAB_DATA = {
     },
 
     {
-      title: "Population-Level Disease Prevention Modeling",
+      title: "Understanding Youth Substance Use Through Longitudinal Data",
       status: "active",
-      tags: ["Disease Prevention", "Screening", "Epidemiological Modeling"],
-      summary: "Quantitative models to evaluate and optimize cancer screening programs, vaccination schedules, and early-intervention policies.",
-      description: "This project builds mathematical models that simulate disease progression and evaluate the population-level impact of prevention strategies. We work with public health partners to optimize screening intervals, target high-risk populations, and allocate limited prevention resources equitably. Methods include Markov chains, simulation, and dynamic programming.",
+      tags: ["Machine Learning","Network Optimization","Epidemiological Modeling"],
+      summary: "Leveraging the ABCD Study to identify social, behavioral, and environmental factors associated with alcohol, nicotine, cannabis, and polysubstance use among adolescents over time.",
       image: "",
       funding: "",
       members: ["Prof. Daniel Otero-León"],
       papers: [],
       tools: [],
-      links: [],
+      links: [
+	{
+           label: "Adolescent Brain Cognitive Development Study ",
+           url: "https://abcdstudy.org/",
+           icon: "💽"
+        },],
     },
 
     {
-      title: "Healthcare Operations & Resource Allocation",
+      title: "Smarter Surgery Scheduling Under Uncertainty",
       status: "active",
-      tags: ["Operations Research", "Resource Allocation", "Patient Flow"],
-      summary: "Analytical tools to improve hospital operations: bed management, scheduling, staff allocation, and supply chain resilience.",
-      description: "We design and implement OR-based tools that help hospitals and health systems operate more efficiently. Projects span surgical scheduling, ICU capacity planning, emergency department throughput, and pharmaceutical supply chains. Our goal is to translate rigorous mathematical models into decision tools that practitioners can actually use.",
+      tags: ["Stochastic Optimzation", "Resource Allocation", "Machine Learning","Surgery"],
+      summary: "Developing data-driven optimization models to improve operating room scheduling, reduce overtime, and increase efficiency in healthcare systems while accounting for uncertainty in surgical durations.",
       image: "",
       funding: "",
-      members: ["Prof. Daniel Otero-León"],
+      members: ["Prof. Daniel Otero-León","Constanza Lorca"],
       papers: [],
       tools: [],
       links: [],
